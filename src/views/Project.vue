@@ -19,7 +19,7 @@
     </v-card-text>
 
     <v-card-actions>
-      <v-btn class="white--text" color="indigo accent-4" href="https://github.com/Gilchrist32/gilchristcalunia" target="_blank">
+      <v-btn class="white--text" color="indigo accent-4" href="https://github.com/Gilchrist32/gcofficial-portfolio" target="_blank">
       <v-icon>folder_open</v-icon><span>Github</span></v-btn>
       <v-spacer></v-spacer>
       <v-btn icon>
