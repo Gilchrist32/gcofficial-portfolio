@@ -1,6 +1,6 @@
 <template>
       <nav>
-         <v-toolbar color="#080d1d" dark app src="../assets/photo/footage.jpg">
+        <v-app-bar app clipped-left dark src="../assets/photo/footage.jpg">
              <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
                     <router-link to="/">
                         <img alt="logogc1" src="../assets/photo/logogc1.png" width="210px" height="55px">
@@ -24,7 +24,7 @@
                   </template>
                     <span>Follow me on Github and give a star for my repositories</span>
                   </v-tooltip>
-        </v-toolbar>
+        </v-app-bar>
         <div class="justify-content-center text-center">
         <v-navigation-drawer app v-model="drawer" src="../assets/photo/bstyle.jpg"> 
         <v-list-item>

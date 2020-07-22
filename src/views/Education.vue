@@ -8,7 +8,7 @@
                 </v-tabs>
                   <v-tabs-items v-model="tab">
                     <v-tab-item v-for="tabname in tabnames" :key="tabname">
-                      <v-flex id="flex" v-if="tabname === 'College'">
+                      <v-flex id="flex" v-if="tabname == 'College'">
                           <v-img id="image" src="../assets/photo/slsu.png" alt="slsu"  width="250" ></v-img>
                           <p id="schoolname" class="pt-auto mb-0">Southern Leyte State University</p>
                           <p id="address">Sogod, Southern Leyte, Philippines</p>
@@ -36,7 +36,7 @@
                   </v-tabs-items>
                 </v-flex>
               </v-layout>
-            </v-container>
+        </v-container>
     </div>
 </template>
 <script>
