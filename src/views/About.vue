@@ -37,7 +37,7 @@
               </v-row>
               <v-divider></v-divider>
             </v-col>
-            <v-col class="user-info">
+            <v-col class="user-info" v-for="pro in profile" :key="pro.id">
               <v-tabs grow v-model="tab" background-color="#FAFAFA" color="#3F67B3">
                   <v-tab v-for="tabname in tabnames" :key="tabname" id="det"> {{ tabname }} </v-tab>
                 </v-tabs>
@@ -47,32 +47,29 @@
                           <v-row>
                             <v-col md="2" sm="2" class="mt-3 ml-1">
                               <p>Age</p>
-                              <span>22</span>
+                              <span>{{ pro.age }}</span>
                             </v-col>
                             <v-col md="3" sm="3" class="mt-3">
                               <p>Birth Date</p>
-                              <span>09/04/1997</span>
+                              <span>{{ pro.birthdate }}</span>
                             </v-col>
                             <v-col md="2" sm="2" class="mt-3">
                               <p>Gender</p>
-                              <span>Male</span>
+                              <span>{{ pro.gender }}</span>
                             </v-col>
                             <v-col md="2" sm="2" class="mt-3">
                               <p>Status</p>
-                              <span>Single</span>
+                              <span>{{ pro.status }}</span>
                             </v-col>
                             <v-col md="2" sm="2" class="mt-3 mr-4">
                               <p>Religion</p>
-                              <span>Catholic</span>
+                              <span>{{ pro.religion }}</span>
                             </v-col>
                             <v-col md="12" sm="12" class="mt-3 mr-4">
                               <p>Address</p>
-                              <span>Purok Tulingan Brgy. San Agustin, Tomas Oppus, Southern Leyte</span>
+                              <span>{{ pro.address }}</span>
                                <p class="mt-3 ">Bio</p>
-                              <span>An energetic and imaginative young web developer whos is able to work alongside
-                                other talented IT Professionals in creating websites to the highest standards. I love
-                                problems a creatingn beautiful fuctional work.
-                              </span>
+                              <span>{{ pro.bio }}</span>
                             </v-col>
                           </v-row>
                       </v-flex>
@@ -104,15 +101,29 @@
 </template>
 <script>
 import Carousel from '../components/Carousel.vue'
+import { PROFILE } from '../graphql/queries'
 
 export default {
+  name: 'About',
   components: {
     Carousel,
   },
-   data: () => ({
-    tab: null,
-    tabnames: ['Information', 'Experience']
-  }),
+
+  data(){
+    return {
+      tab: null,
+      tabnames: ['Information', 'Experience'],
+      profile: []
+    }
+  },
+  apollo: {
+    profile: {
+      query: PROFILE,
+      return ({ data }) {
+        this.profile = data.profile
+      }
+    }
+  },
  computed: {
    theme(){
      return this.$vuetify.theme.dark ? "dark" :"light";
