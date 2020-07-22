@@ -3,7 +3,7 @@
     <Navbar />
     <main>
     <vue-page-transition name="fade-in-right" class="content">
-  
+
       <v-content>
         <router-view></router-view>
       </v-content>
@@ -26,7 +26,7 @@ export default {
   components: {
     Navbar,
     Footer,
-    BackToTop
+    BackToTop,
   },
 
   data: () => ({
