@@ -12,20 +12,20 @@ import { getMainDefinition } from 'apollo-utilities'
 
 
 const httpLink = new HttpLink({
-  uri: "https://gilchristcalunia.herokuapp.com/v1/graphql",
+  uri: "https://gcofficial-portfolio.herokuapp.com/v1/graphql",
   headers: {
-    'x-hasura-admin-secret': 'gilchrist32'
+    'x-hasura-admin-secret': 'gcofficial32'
   }
 });
 
 const wsLink = new WebSocketLink({
-  uri: "wss://gilchristcalunia.herokuapp.com/v1/graphql",
+  uri: "wss://gcofficial-portfolio.herokuapp.com/v1/graphql",
   options: {
     reconnect: true,
     connectionParams() {
       return {
         headers: {
-          'x-hasura-admin-secret': 'gilchrist32'
+          'x-hasura-admin-secret': 'gcofficial32'
         }
       }
     }
