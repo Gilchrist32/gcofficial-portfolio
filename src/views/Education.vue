@@ -3,8 +3,8 @@
        <v-container fluid fill-height pa-0 ma-0>
               <v-layout column>
                 <v-flex class="justify-content-center text-center">
-                  <v-tabs id="tabstitle" grow v-model="tab" background-color="#424242" dark color="#FFFF00">
-                  <v-tab v-for="tabname in tabnames" :key="tabname"> {{ tabname }} </v-tab>
+                  <v-tabs grow v-model="tab" background-color="#424242" dark color="#FFFF00">
+                  <v-tab v-for="tabname in tabnames" :key="tabname" id="ed"> {{ tabname }} </v-tab>
                 </v-tabs>
                   <v-tabs-items v-model="tab">
                     <v-tab-item v-for="tabname in tabnames" :key="tabname">
@@ -52,6 +52,9 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Oleo+Script&family=Squada+One&family=Teko&display=swap');
 
+#ed{
+  font-size: 12px;
+}
 #flex{
     background-color: #20284D;
     padding-bottom: 45px;

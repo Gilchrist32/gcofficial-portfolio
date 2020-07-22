@@ -38,8 +38,8 @@
               <v-divider></v-divider>
             </v-col>
             <v-col class="user-info">
-              <v-tabs id="tabstitle" grow v-model="tab" background-color="#FAFAFA" color="#3F67B3">
-                  <v-tab v-for="tabname in tabnames" :key="tabname"> {{ tabname }} </v-tab>
+              <v-tabs grow v-model="tab" background-color="#FAFAFA" color="#3F67B3">
+                  <v-tab v-for="tabname in tabnames" :key="tabname" id="det"> {{ tabname }} </v-tab>
                 </v-tabs>
                   <v-tabs-items v-model="tab">
                     <v-tab-item v-for="tabname in tabnames" :key="tabname">
@@ -61,14 +61,14 @@
                               <p>Status</p>
                               <span>Single</span>
                             </v-col>
-                            <v-col md="2" sm="2" class="mt-3 mr-1">
+                            <v-col md="2" sm="2" class="mt-3 mr-4">
                               <p>Religion</p>
                               <span>Catholic</span>
                             </v-col>
-                            <v-col md="12" sm="12" class="mt-3">
+                            <v-col md="12" sm="12" class="mt-3 mr-4">
                               <p>Address</p>
                               <span>Purok Tulingan Brgy. San Agustin, Tomas Oppus, Southern Leyte</span>
-                               <p class="mt-3">Bio</p>
+                               <p class="mt-3 ">Bio</p>
                               <span>An energetic and imaginative young web developer whos is able to work alongside
                                 other talented IT Professionals in creating websites to the highest standards. I love
                                 problems a creatingn beautiful fuctional work.
@@ -78,7 +78,7 @@
                       </v-flex>
                       <v-flex id="flex" v-if="tabname == 'Experience'">
                         <v-row>
-                            <v-col md="12" sm="12" class="mt-3">
+                            <v-col md="12" sm="12" class="mt-3 mr-4">
                               <h3>Department of Labor and Employment Region 7 (DOLE VII)</h3>
                               <p style="font-size: 13px;">IT Specialist</p>
                               <span style="font-size: 15px;">August 2019 - December 2019</span><br>
@@ -125,10 +125,13 @@ export default {
 
 .top {
   background: url('../assets/photo/background1.jpeg');
-  padding: 100px 0;
+  padding: 90px 0;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+#det{
+   font-size: 14px;
 }
 .image-section{
   padding: 0px;
