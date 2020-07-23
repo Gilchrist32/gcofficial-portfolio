@@ -6,12 +6,12 @@
           <div class="top">
           </div>
         </v-col>
-        <v-row class="user-left">
+        <v-row class="user-left" v-for="pro in profile" :key="pro.id">
           <v-col md="4" sm="4" class="user-pro">
-            <v-row>
+            <v-row >
               <v-col md="12" sm="12" class="user-image">
                 <v-img class="mt-n16 mx-auto" src="../assets/photo/gilchrist.png" alt="gilchrist" width="200px" />
-                <h1 class="text-center">Gilchrist Abrea Calunia</h1>
+                <h1 class="text-center">{{ pro.firstname }} {{ pro.middlename }} {{ pro.lastname }}</h1>
                 <h3 class="text-center">Web Developer</h3>
               </v-col>
               <v-row class="user-detail">
@@ -37,7 +37,7 @@
               </v-row>
               <v-divider></v-divider>
             </v-col>
-            <v-col class="user-info" v-for="pro in profile" :key="pro.id">
+            <v-col class="user-info">
               <v-tabs grow v-model="tab" background-color="#FAFAFA" color="#3F67B3">
                   <v-tab v-for="tabname in tabnames" :key="tabname" id="det"> {{ tabname }} </v-tab>
                 </v-tabs>
