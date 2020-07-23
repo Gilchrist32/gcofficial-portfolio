@@ -16,7 +16,7 @@
               </v-col>
               <v-row class="user-detail">
                 <v-col md="12" sm="12" class="user-detail-section text-left">
-                   <v-alert class="user-detail-section2 text-left" dense outlined color="grey">
+                   <v-alert class="user-detail-section2 text-left" dense outlined color="#C6FF00">
                      <v-icon class="mr-3" color="amber accent-3">email</v-icon><span class="white--text">EMAIL</span>
                      <p>calunia32@gmail.com</p>
                      <v-divider></v-divider>
@@ -27,25 +27,24 @@
               </v-row>
             </v-row>
           </v-col>
-          <v-col md="8" sm="8" class="profile-section">
+          <v-col md="8" sm="8" class="profile-section pl-0">
           <v-row claas="profile-section-row">
             <v-col md="12" sm="12" class="header">
               <v-row>
-                <v-col md="8" sm="6" class="header-sectiom">
-                  <h1>User Profile</h1>
+                <v-col md="8" sm="6" class="header-section">
+                  <h1 class="ml-4">User Profile</h1>
                 </v-col>
               </v-row>
-              <v-divider></v-divider>
             </v-col>
-            <v-col class="user-info">
-              <v-tabs grow v-model="tab" background-color="#FAFAFA" color="#3F67B3">
+            <v-col class="user-info mr-3 ">
+              <v-tabs grow v-model="tab"  background-color="#424242"  dark color="#FFFF00">
                   <v-tab v-for="tabname in tabnames" :key="tabname" id="det"> {{ tabname }} </v-tab>
                 </v-tabs>
                   <v-tabs-items v-model="tab">
                     <v-tab-item v-for="tabname in tabnames" :key="tabname">
                       <v-flex id="flex" v-if="tabname === 'Information'">
                           <v-row>
-                            <v-col md="2" sm="2" class="mt-3 ml-1">
+                            <v-col md="2" sm="2" class="mt-3 ml-4">
                               <p>Age</p>
                               <span>{{ pro.age }}</span>
                             </v-col>
@@ -65,7 +64,7 @@
                               <p>Religion</p>
                               <span>{{ pro.religion }}</span>
                             </v-col>
-                            <v-col md="12" sm="12" class="mt-3 mr-4">
+                            <v-col md="12" sm="12" class="mt-3 mr-4 ml-4">
                               <p>Address</p>
                               <span>{{ pro.address }}</span>
                                <p class="mt-3 ">Bio</p>
@@ -75,7 +74,7 @@
                       </v-flex>
                       <v-flex id="flex" v-if="tabname == 'Experience'">
                         <v-row>
-                            <v-col md="12" sm="12" class="mt-3 mr-4">
+                            <v-col md="12" sm="12" class="mt-3 mr-4 ml-4">
                               <h3>Department of Labor and Employment Region 7 (DOLE VII)</h3>
                               <p style="font-size: 13px;">IT Specialist</p>
                               <span style="font-size: 15px;">August 2019 - December 2019</span><br>
@@ -135,7 +134,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Didact+Gothic&display=swap');
 
 .top {
-  background: url('../assets/photo/background1.jpeg');
+  background: url('../assets/background/1.jpg');
   padding: 90px 0;
   display: flex;
   justify-content: center;
@@ -186,10 +185,14 @@ export default {
 }
 .profile-section{
   padding: 1px 0px 13px 15px;
-  background-color: #FFFFFF;  
+   background: url('../assets/background/back.png'); 
 }
-.profile-sectiom-row{
+.profile-section-row{
   margin: 0px;
+}
+.header-section{
+  color: #FFFF00;
+  font-size: 20px;
 }
 .header-section1 h1{
   font-size: 25px;
@@ -222,5 +225,8 @@ export default {
 }
 h1, h2, h3, h4, h5{
   font-family: 'Concert One';
+}
+h3{
+  color: #C6FF00;
 }
 </style>

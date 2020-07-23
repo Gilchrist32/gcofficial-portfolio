@@ -56,9 +56,10 @@ export default {
   font-size: 12px;
 }
 #flex{
-    background-color: #20284D;
+    background: url('../assets/background/back.png');
     padding-bottom: 45px;
 }
+
 #image{
     margin-left: auto;
     margin-right: auto;
