@@ -75,12 +75,12 @@
                       <v-flex id="flex" v-if="tabname == 'Experience'">
                         <v-row>
                             <v-col md="12" sm="12" class="mt-3 mr-4 ml-4">
-                              <h3>Department of Labor and Employment Region 7 (DOLE VII)</h3>
+                              <h2>Department of Labor and Employment Region 7 (DOLE VII)</h2>
                               <p style="font-size: 13px;">IT Specialist</p>
                               <span style="font-size: 15px;">August 2019 - December 2019</span><br>
                               <span style="font-size: 15px;">Insular Bldg. General Maxilom Gorordo Avenue, Cebu City</span>
                                <v-divider></v-divider>
-                               <h3 class="mt-3">Department of Labor and Employment Region 7 (DOLE VII)</h3>
+                               <h2 class="mt-3">Department of Labor and Employment Region 7 (DOLE VII)</h2>
                               <p style="font-size: 13px;">IT Specialist</p>
                               <span style="font-size: 15px;">August 2018 - April 2019</span><br>
                               <span style="font-size: 15px;">Insular Bldg. General Maxilom Gorordo Avenue, Cebu City</span>
