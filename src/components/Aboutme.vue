@@ -14,16 +14,27 @@
                         I enjoy creating beautifully designed, intuitive and functional websites.
                     </p>
                     <p>I enjoy challenging tasks and look forward to interesting and innovative projects.</p>
-                    <router-link to="/about">
-                     <v-btn class="ma-2" color="#FFC400" dark large  rounded href="https://github.com/Gilchrist32/gilchristcalunia" target="_blank">
-                        <v-icon class="mr-2" >accessibility</v-icon><span id="chat">MORE ABOUT</span></v-btn>
-                    </router-link>
+                     <v-btn v-for="link in event" :key="link.title" router :to="link.route" :loading="loading"
+                     class="ma-2" color="#FFC400" dark large  rounded>
+                        <v-icon class="mr-2" >{{ link.icons }}</v-icon><span id="chat">{{ link.title }}</span></v-btn>
                   </v-col>
               </v-row>
           </v-container>
     </v-mask> 
   </div>
 </template>
+<script>
+export default {
+  data () {
+    return {
+      loading: false,
+      event: [
+        { icons: 'accessibility', title: 'MORE ABOUT', route: '/about'}
+      ]
+    }
+  }
+}
+</script>>
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@900&family=Didact+Gothic:wght@900&display=swap');
 
