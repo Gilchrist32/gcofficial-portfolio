@@ -59,20 +59,18 @@
                               <p>Birth Date</p>
                               <span>{{ pro.birthdate }}</span>
                             </v-col>
-                            <v-col md="2" sm="2" class="mt-3">
+                            <v-col md="3" sm="3" class="mt-3">
                               <p>Gender</p>
                               <span>{{ pro.gender }}</span>
                             </v-col>
-                            <v-col md="2" sm="2" class="mt-3">
+                            <v-col md="3" sm="3" class="mt-3">
                               <p>Status</p>
                               <span>{{ pro.status }}</span>
                             </v-col>
-                            <v-col md="2" sm="2" class="mt-3 mr-4">
-                              <p>Religion</p>
-                              <span>{{ pro.religion }}</span>
-                            </v-col>
                             <v-col md="12" sm="12" class="mt-3 mr-4 ml-4">
-                              <p>Address</p>
+                               <p>Religion</p>
+                              <span>{{ pro.religion }}</span>
+                              <p class="mt-3 ">Address</p>
                               <span>{{ pro.address }}</span>
                                <p class="mt-3 ">Bio</p>
                               <span>{{ pro.bio }}</span>
@@ -209,7 +207,7 @@ export default {
   color:#878787;
 }
 .user-info p{
-  font-size:12px;
+  font-size:17px;
   padding: 0px;
   margin: 0px;
   font-family: 'Didact Gothic', sans-serif;
@@ -219,7 +217,7 @@ export default {
 }
 .user-info span{
   color:#3F67B3;
-  font-size: 14px;
+  font-size: 16px;
    font-family: 'Didact Gothic', sans-serif;
 }
 .user-info small{
