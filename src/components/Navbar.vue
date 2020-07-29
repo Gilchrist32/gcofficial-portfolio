@@ -62,7 +62,7 @@ export default {
            menuItems: [
                { icons: 'mdi-home', title: 'HOME', route: '/' },
                { icons: 'mdi-account-circle', title: 'PROFILE', route: '/about' },
-               { icons: 'account_balance', title: 'EDUCATION', route: '/education' },
+               { icons: 'school', title: 'EDUCATION', route: '/education' },
                { icons: 'computer', title: 'PROJECT', route: '/project'}
            ]
        }

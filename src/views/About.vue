@@ -11,17 +11,24 @@
             <v-row >
               <v-col md="12" sm="12" class="user-image">
                 <v-img class="mt-n16 mx-auto" src="../assets/photo/gilchrist.png" alt="gilchrist" width="200px" />
-                <h1 class="text-center">{{ pro.firstname }} {{ pro.middlename }} {{ pro.lastname }}</h1>
+                <v-card class="mx-auto" max-width="330" shaped color="#2A3B4D">
+                  <h2 class="text-center white--text">{{ pro.firstname }} {{ pro.middlename }} {{ pro.lastname }}</h2>
                 <h3 class="text-center">Web Developer</h3>
+                </v-card>
               </v-col>
               <v-row class="user-detail">
                 <v-col md="12" sm="12" class="user-detail-section text-left">
-                   <v-alert class="user-detail-section2 text-left" dense outlined color="#C6FF00">
-                     <v-icon class="mr-3" color="amber accent-3">email</v-icon><span class="white--text">EMAIL</span>
-                     <p>calunia32@gmail.com</p>
-                     <v-divider></v-divider>
-                     <v-icon class="mr-3" color="amber accent-3">phone_android</v-icon><span class="white--text">MOBILE</span>
-                     <p> 09365657801 / 09334371899</p>
+                  <h2 class="contactop text-left ma-auto ml-4">CONTACT:</h2>
+                  <hr class="my-1">
+                   <v-alert class="user-detail-section2 text-left" dense dark icon="email" prominent color="#2A3B4D" border="left">
+                     <span class="white--text" id="conhead">EMAIL</span><br>
+                      <hr class="yellow accent-3 mb-2 mt-0 d-inline-block mx-auto" style="width: 100px" />
+                     <p id="contact">calunia32@gmail.com</p>
+                  </v-alert>
+                  <v-alert class="user-detail-section2 text-left" dense dark icon="phone_android" prominent color="#2A3B4D" border="left">
+                     <span class="white--text" id="conhead">MOBILE</span><br>
+                     <hr class="yellow accent-3 mb-2 mt-0 d-inline-block mx-auto" style="width: 100px" />
+                     <p id="contact">09365657801 / 09334371899</p>
                   </v-alert>
                 </v-col>
               </v-row>
@@ -31,8 +38,8 @@
           <v-row claas="profile-section-row">
             <v-col md="12" sm="12" class="header">
               <v-row>
-                <v-col md="8" sm="6" class="header-section">
-                  <h1 class="ml-4">User Profile</h1>
+                <v-col md="6" sm="8" class="header-section">
+                  <h1 class="ml-4"><v-icon color="#FFFF00" x-large>person</v-icon>  PROFILE</h1>
                 </v-col>
               </v-row>
             </v-col>
@@ -141,7 +148,7 @@ export default {
   align-items: center;
 }
 #det{
-   font-size: 14px;
+   font-size: 15px;
 }
 .image-section{
   padding: 0px;
@@ -228,5 +235,16 @@ h1, h2, h3, h4, h5{
 }
 h3{
   color: #C6FF00;
+}
+#contact{
+  color: #90CAF9;
+  font-family: 'Didact Gothic';
+}
+#conhead{
+  font-family: 'Concert One';
+  font-size: 20px;
+}
+.contactop{
+  color: #212121;
 }
 </style>
