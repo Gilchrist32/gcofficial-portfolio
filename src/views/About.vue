@@ -11,23 +11,23 @@
             <v-row >
               <v-col md="12" sm="12" class="user-image">
                 <v-img class="mt-n16 mx-auto" src="../assets/photo/gilchrist.png" alt="gilchrist" width="200px" />
-                <v-card class="mx-auto" max-width="330" shaped color="#2A3B4D">
+                <v-card class="mx-auto" max-width="330" shaped color="#0e152c">
                   <h2 class="text-center white--text">{{ pro.firstname }} {{ pro.middlename }} {{ pro.lastname }}</h2>
                 <h3 class="text-center">Web Developer</h3>
                 </v-card>
               </v-col>
               <v-row class="user-detail">
                 <v-col md="12" sm="12" class="user-detail-section text-left">
-                  <h2 class="contactop text-left ma-auto ml-4">CONTACT:</h2>
+                  <h2 class="contactop text-left white--text ma-auto ml-4">CONTACT:</h2>
                   <hr class="my-1">
-                   <v-alert class="user-detail-section2 text-left" dense dark icon="email" prominent color="#2A3B4D" border="left">
+                   <v-alert class="user-detail-section2 text-left" dense dark icon="email" prominent color="#0e152c" border="left">
                      <span class="white--text" id="conhead">EMAIL</span><br>
-                      <hr class="yellow accent-3 mb-2 mt-0 d-inline-block mx-auto" style="width: 100px" />
+                      <hr class="amber accent-3 mb-2 mt-0 d-inline-block mx-auto" style="width: 100px" />
                      <p id="contact">calunia32@gmail.com</p>
                   </v-alert>
-                  <v-alert class="user-detail-section2 text-left" dense dark icon="phone_android" prominent color="#2A3B4D" border="left">
+                  <v-alert class="user-detail-section2 text-left" dense dark icon="phone_android" prominent color="#0e152c" border="left">
                      <span class="white--text" id="conhead">MOBILE</span><br>
-                     <hr class="yellow accent-3 mb-2 mt-0 d-inline-block mx-auto" style="width: 100px" />
+                     <hr class="amber accent-3 mb-2 mt-0 d-inline-block mx-auto" style="width: 100px" />
                      <p id="contact">09365657801 / 09334371899</p>
                   </v-alert>
                 </v-col>
@@ -39,12 +39,12 @@
             <v-col md="12" sm="12" class="header">
               <v-row>
                 <v-col md="6" sm="8" class="header-section">
-                  <h1 class="ml-4"><v-icon color="#FFFF00" x-large>person</v-icon>  PROFILE</h1>
+                  <h1 class="ml-4"><v-icon color="#FFC400" x-large>person</v-icon>  PROFILE</h1>
                 </v-col>
               </v-row>
             </v-col>
             <v-col class="user-info mr-3 ">
-              <v-tabs grow v-model="tab"  background-color="#424242"  dark color="#FFFF00">
+              <v-tabs grow v-model="tab"  background-color="#424242"  dark color="#FFC400">
                   <v-tab v-for="tabname in tabnames" :key="tabname" id="det"> {{ tabname }} </v-tab>
                 </v-tabs>
                   <v-tabs-items v-model="tab">
@@ -139,7 +139,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Didact+Gothic&display=swap');
 
 .top {
-  background: url('../assets/background/1.jpg');
+  background: url('../assets/photo/backstyle.jpeg');
   padding: 90px 0;
   display: flex;
   justify-content: center;
@@ -150,7 +150,6 @@ export default {
 }
 .image-section{
   padding: 0px;
-  margin-top: 10px;
 }
 .image-section img{
   width: 100%;
@@ -185,18 +184,18 @@ export default {
   color:#D3A86A;
 }
 .user-detail-section .t2{
-  color:#2e2e2e;
+  color: #0e152c;
   font-size: 12px;
 }
 .profile-section{
   padding: 1px 0px 13px 15px;
-   background: url('../assets/background/back.png'); 
+   background: url('../assets/photo/backstyle.jpeg'); 
 }
 .profile-section-row{
   margin: 0px;
 }
 .header-section{
-  color: #FFFF00;
+  color: #FFC400;
   font-size: 20px;
 }
 .header-section1 h1{
@@ -229,20 +228,21 @@ export default {
   font-size: 12px;
 }
 h1, h2, h3, h4, h5{
-  font-family: 'Concert One';
+  font-family: 'Didact Gothic';
+   font-weight: bolder;
 }
 h3{
-  color: #C6FF00;
+  color: #FFC400;
 }
 #contact{
   color: #90CAF9;
   font-family: 'Didact Gothic';
 }
 #conhead{
-  font-family: 'Concert One';
-  font-size: 20px;
+  font-family: 'Didact Gothic';
+  font-size: 18px;
 }
 .contactop{
-  color: #212121;
+  font-size: 18px;
 }
 </style>
