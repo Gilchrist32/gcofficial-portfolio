@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <v-flex xs10>
-        <v-btn v-scroll='onScroll' v-show="fab" fab dark fixed bottom right color="#0e152c" @click="toTop">
+        <v-btn v-scroll='onScroll' v-show="fab" fab dark fixed bottom right color="#FFC400" @click="toTop">
           <v-icon>arrow_circle_up</v-icon>
         </v-btn>
     </v-flex>
