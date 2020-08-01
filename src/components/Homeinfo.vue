@@ -4,7 +4,6 @@
           <v-container>
               <v-row>
                   <div class="white-text text-center text-md-left col-md-6 mt-xl-5 mb-6 mt-3  ">
-                    <h6 id="twel" class="h6-responsive font-weight-bold mt-sm-3">My Name is</h6>
                     <h1 id="mname" class="h6-responsive font-weight-bold">GILCHRIST CALUNIA</h1>
                     <h6 id="quo" class="mb-4 font-weight-bold">Information Technology, Front-end Web Developer.</h6>
                       <hr class="my-4"> 
