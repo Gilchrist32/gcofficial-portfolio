@@ -16,9 +16,9 @@
 </template>
 
 <script>
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import BackToTop from './components/BackToTop';
+import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
+import BackToTop from './components/mixim/BackToTop';
 
 export default {
   name: 'App',
