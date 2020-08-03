@@ -25,7 +25,7 @@
                          <a href="http://www.facebook.com/dafenhs.page.shs.jhs/" target="_blank" id="schoolink">www.facebook.com/dafenhs.page</a>
                       </v-flex>
                       <v-flex id="flex" v-if="tabname == 'Elementary'">
-                          <v-img id="image" src="../assets/photo/Tocslogo.png" akt="Tocslogo" width="250"></v-img>
+                          <v-img id="image" src="../assets/photo/tocs.png" akt="tocs" width="250"></v-img>
                           <p id="schoolname" class="pt-auto mb-0">Tomas Oppus Central School</p>
                           <p id="address">Bogo, Tomas Oppus, Southern Leyte, Philippines</p>
                           <p id="course" class="mt-3 mb-0">Elementary Student</p>
