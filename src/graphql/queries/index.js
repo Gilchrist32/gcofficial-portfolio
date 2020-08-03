@@ -35,4 +35,16 @@ query getCountSubscriber {
     }
 }
 `
+export const PROJECT_QUERYS = gql`
+query getProject {
+  project(order_by: {created_at: asc}) {
+    id
+    title
+    description
+    image_url
+    source_code
+    created_at
+  }
+}
+`
 
