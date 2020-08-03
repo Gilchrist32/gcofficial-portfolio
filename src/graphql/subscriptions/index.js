@@ -34,3 +34,15 @@ subscription getCountSubscriber {
     }
   }  
 `
+export const PROJECT_SUBSCRIPTION = gql`
+subscription getProject {
+  project(order_by: {created_at: asc}) {
+    id
+    title
+    description
+    image_url
+    source_code
+    created_at
+  }
+}
+`
