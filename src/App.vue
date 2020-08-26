@@ -5,7 +5,7 @@
     <vue-page-transition name="fade-in-right" class="content">
 
       <v-content>
-        <router-view></router-view>
+        <router-view />
       </v-content>
    
     </vue-page-transition>
