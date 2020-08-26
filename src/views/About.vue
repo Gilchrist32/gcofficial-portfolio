@@ -18,7 +18,7 @@
                      <v-row class="user-detail">
                        <v-col md="12" sm="12" class="user-detail-section text-left">
                           <div class="text-right">
-                           <fab-tooltip />
+                           <fab-tool />
                          </div>
                          <h1 class="contactop text-left white--text ma-auto ml-4">CONTACT:</h1>
                          <hr class="my-1">
@@ -111,7 +111,7 @@
 </template>
 <script>
 import Carousel from '../components/mixim/Carousel.vue'
-import FabTooltip from '../components/mixim/FabTooltip.vue'
+import FabTool from '../components/mixim/FabTool.vue'
 import { PROFILE } from '../graphql/queries'
 
 export default {
@@ -119,7 +119,7 @@ export default {
 
   components: {
     Carousel,
-    FabTooltip
+    FabTool
   },
 
   data(){
