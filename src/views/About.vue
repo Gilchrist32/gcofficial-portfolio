@@ -11,13 +11,16 @@
                      <v-col md="12" sm="12" class="user-image">
                        <v-img class="mt-n16 mx-auto" src="../assets/photo/gilchrist.png" alt="gilchrist" width="200px" />
                         <v-card class="mx-auto" max-width="330" shaped color="#0e152c">
-                          <h2 class="text-center white--text">{{ pro.firstname }} {{ pro.middlename }} {{ pro.lastname }}</h2>
+                          <h1 class="text-center white--text" style="font-size: 26px">{{ pro.firstname }} {{ pro.middlename }} {{ pro.lastname }}</h1>
                           <h3 class="text-center">Web Developer</h3>
                         </v-card>
                      </v-col>
                      <v-row class="user-detail">
                        <v-col md="12" sm="12" class="user-detail-section text-left">
-                         <h2 class="contactop text-left white--text ma-auto ml-4">CONTACT:</h2>
+                          <div class="text-right">
+                           <fab-tooltip />
+                         </div>
+                         <h1 class="contactop text-left white--text ma-auto ml-4">CONTACT:</h1>
                          <hr class="my-1">
                          <v-alert class="user-detail-section2 text-left" dense dark icon="email" prominent color="#0e152c" border="left">
                            <span class="white--text" id="conhead">EMAIL</span><br>
@@ -79,12 +82,12 @@
                             <v-flex id="flex" v-if="tabname == 'Experience'">
                               <v-row>
                                 <v-col md="12" sm="12" class="mt-3 mr-4 ml-4">
-                                  <h2 style="font-size: 20px">Department of Labor and Employment Region 7 (DOLE VII)</h2>
+                                  <h3 style="font-size: 20px; color: #000">Department of Labor and Employment Region 7 (DOLE VII)</h3>
                                   <p style="font-size: 13px;" class="mt-2">IT Specialist</p>
                                   <span style="font-size: 15px;">August 2019 - December 2019</span><br>
                                   <span style="font-size: 15px;">Insular Bldg. General Maxilom Gorordo Avenue, Cebu City</span>
                                   <v-divider></v-divider>
-                                  <h2 style="font-size: 20px" class="mt-3">Department of Labor and Employment Region 7 (DOLE VII)</h2>
+                                  <h3 style="font-size: 20px; color: #000" class="mt-3">Department of Labor and Employment Region 7 (DOLE VII)</h3>
                                   <p style="font-size: 13px;" class="mt-2">IT Specialist</p>
                                   <span style="font-size: 15px;">August 2018 - April 2019</span><br>
                                   <span style="font-size: 15px;">Insular Bldg. General Maxilom Gorordo Avenue, Cebu City</span>
@@ -108,6 +111,7 @@
 </template>
 <script>
 import Carousel from '../components/mixim/Carousel.vue'
+import FabTooltip from '../components/mixim/FabTooltip.vue'
 import { PROFILE } from '../graphql/queries'
 
 export default {
@@ -115,6 +119,7 @@ export default {
 
   components: {
     Carousel,
+    FabTooltip
   },
 
   data(){
@@ -150,7 +155,7 @@ export default {
 }
 .top {
   background: #BDBDBD;
-  padding: 90px 0;
+  padding: 65px 0;
   display: flex;
   justify-content: center;
   align-items: center;
