@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row">
                 <div class="footer-col col-md-4">
-                    <v-img src="@/assets/photo/logogc1.png" alt="logogc1" width="250px" height="50px"></v-img>
+                    <v-img src="@/assets/photo/gc.png" alt="logogc1" width="100px"></v-img>
                      <p class="name">GC Website & Portfolio</p>
                      <span class="name">
                       I'm a Web Developer and Freelance Designer based Philippines. I create innovative solutions that make your product or
