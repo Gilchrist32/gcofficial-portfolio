@@ -43,6 +43,23 @@ subscription getProject {
     image_url
     source_code
     created_at
+    likeCount: like_aggregate {
+      aggregate {
+          count
+      }
+  }
+  }
+}
+`
+export const GET_ALL_PROJECT_SUBSCRIPTION = gql`
+subscription getAllProject($project_id: uuid!){
+  project(order_by: {created_at: asc}, where: {id: {_eq: $project_id}}) {
+      id
+      titile
+      description
+      image_url
+      source_code
+      created_at
   }
 }
 `

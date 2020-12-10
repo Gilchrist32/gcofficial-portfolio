@@ -10,3 +10,15 @@ mutation insertSubscriber($email: String!) {
     }
 }
 `
+export const ADD_LIKE_MUTATION = gql`
+mutation insertlikeProject($project_id: uuid!, $name: String!) {
+    insert_like(objects: {project_id: $project_id, name: $name}) {
+      returning {
+        id
+        name
+        project_id
+        like
+      }
+    }
+  }  
+`

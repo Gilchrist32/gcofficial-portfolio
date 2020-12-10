@@ -14,17 +14,25 @@
          </v-card-text>
          
          <v-card-actions>
+           <LikeModal />
+          
+           <v-spacer></v-spacer>
            <v-btn class="white--text" color="#0e152c" :href="proj.source_code" target="_blank">
            <v-icon left>folder_open</v-icon><span>View Github</span></v-btn>
-            <v-spacer></v-spacer>
-            <v-btn
-            :loading="loading"
-            :disabled="loading"
-             color="#0e152c"
-            @click="like">
-              <v-icon color="lime accent-4">mdi-thumb-up</v-icon>
-            </v-btn>
           </v-card-actions>
+          <div class="ml-5">
+              <i 
+                class="fa fa-thumbs-up mr-1 ml-2"
+                data-toggle="modal" 
+                :data-target="`#likeUserModal-${proj.id}`">
+              </i> 
+                {{ proj.likeCount ? proj.likeCount.aggregate.count : 0 }}
+              <list-likes-modal 
+                  :project_id="proj.id"/> <!-- List likes Modal component -->
+              <i 
+                class="fa fa-comments mr-1 ml-5"></i> 
+                {{ proj.commentCount ? proj.commentCount.aggregate.count : 0 }}
+            </div>
         </v-card>
       </v-col>
     </v-row>
@@ -32,22 +40,37 @@
   </div>
 </template>
 <script>
+import LikeModal from '../components/LikeModal.vue'
 import { PROJECT_QUERYS } from '../graphql/queries'
 import { PROJECT_SUBSCRIPTION } from '../graphql/subscriptions'
 
 export default {
+  components: {
+    LikeModal
+  },
+
   data(){
     return {
-      loading: false,
-      project: []
+      project: [],
+      project_id: this.$route.params.id
     }
   },
 
   apollo: {
     project: {
       query:  PROJECT_QUERYS,
+      variables() {
+                return {
+                    project_id: this.project_id
+                }
+            },
       subscribeToMore: {
         document: PROJECT_SUBSCRIPTION,
+        variables() {
+                    return {
+                        project_id: this.project_id
+                    }
+                },
         updateQuery(previousResult, { subscriptionData }) {
           if (previousResult) {
             return {
