@@ -33,7 +33,7 @@
     "vue-sweetalert2": "^3.0.6",
     "vue-timeago": "^5.1.2",
     "vuelidate": "^0.7.5",
-    "vuetify": "^2.2.11",
+    "vuetify": "^2.6.10",
     "vuex": "^3.5.1"
   },
   "devDependencies": {
